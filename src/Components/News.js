@@ -49,7 +49,7 @@ export class News extends Component {
         super();
         // if we not call the super() function, then it will cause error
 
-        console.log("I am Component from News Component")
+        // console.log("I am Component from News Component")
 
         // Setting the state :
         // This is the wrong way to set the states in mounted component but we can initialize them in this way
@@ -98,9 +98,11 @@ export class News extends Component {
                 throw new Error("Something went wrong on API server!");
             }
         }).then((response) => {
-            console.debug(response);
+            // For debugging
+            // console.debug(response);
+            
             let newsData = response;
-            console.log(newsData)
+            // console.log(newsData)
             this.props.changeProgress(70)
 
 
@@ -110,7 +112,7 @@ export class News extends Component {
             for (let i = 1; i <= Math.ceil(newsData["totalResults"] / this.newPageSize); i++) {
                 Pages.push(i)
             }
-            console.log(Pages)
+            // console.log(Pages)
 
             // Stopping the Loading as we have got the results
             this.props.changeProgress(85)
@@ -133,15 +135,15 @@ export class News extends Component {
     // It is a lifecycle function that will start working after the render function
     // It will start when all the things get rendered
     componentDidMount = async () => {
-        console.log("It is a componentDidMount method");
+        // console.log("It is a componentDidMount method");
         this.load_fetch_update(this.state.page);
     }
 
     // Function to handle the Next Click Button
     handleNextClick = async () => {
-        console.log("Total Pages : ", this.state.totalPages);
+        // console.log("Total Pages : ", this.state.totalPages);
         if (!document.getElementById("nextBtn").disabled) {
-            console.log("Next Button is Clicked !")
+            // console.log("Next Button is Clicked !")
             this.currentPage++;
             this.load_fetch_update(this.currentPage);
         }
@@ -150,7 +152,7 @@ export class News extends Component {
     // Function to handle the Previous Click Button
     handlePrevClick = async () => {
         if (!document.getElementById("prevBtn").disabled) {
-            console.log("Previous Button is Clicked !")
+            // console.log("Previous Button is Clicked !")
             this.currentPage--;
             this.load_fetch_update(this.currentPage);
         }
@@ -160,13 +162,13 @@ export class News extends Component {
     updatePageSize = () => {
         this.newPageSize = document.getElementById("pageSizeChanger").value;
         this.currentPage = 1;
-        console.log("Size of Page is " + this.newPageSize)
+        // console.log("Size of Page is " + this.newPageSize)
         this.load_fetch_update(this.currentPage);
     }
 
     // Function to handle the page number and show results accordingly
     updatePageNumber = (page) => {
-        console.log(page);
+        // console.log(page);
         this.currentPage = page;
         this.load_fetch_update(page);
     }
@@ -192,7 +194,7 @@ export class News extends Component {
         }).then((response) => {
             console.debug(response);
             let newsData = response;
-            console.log(newsData)
+            // console.log(newsData)
 
             // making the loading stop after it fetch the data
             let Pages = [];
@@ -200,7 +202,7 @@ export class News extends Component {
             for (let i = 1; i <= Math.ceil(newsData["totalResults"] / this.newPageSize); i++) {
                 Pages.push(i)
             }
-            console.log(Pages)
+            // console.log(Pages)
 
             // Stopping the Loading as we have got the results
             this.setState({
@@ -218,8 +220,8 @@ export class News extends Component {
     myCategory = "";
 
     render() {
-        console.log("It is a render method/function");
-        console.log("Country : " + this.props.country)
+        // console.log("It is a render method/function");
+        // console.log("Country : " + this.props.country)
 
         if (this.props.category !== "all") {
             this.myCategory = `category=${this.props.category}&`;

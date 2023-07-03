@@ -14,13 +14,13 @@ export class NewsItem extends Component {
 
         let openNewsImage = () => {
             window.open(imageURL, '_blank', 'noopener,noreferrer');
-            console.log(imageURL)
+            // console.log(imageURL)
         }
 
         let noNews = "https://secondary.oslis.org/secondary/learn-to-research/plan/plan-possible-sources/images-for-plan-possible-sources/newspaper/@@images/image.jpeg"
 
         if (imageURL === null || imageURL === "") {
-            console.log("Image Null")
+            // console.log("Image Null")
             imageURL = noNews;
         }
 

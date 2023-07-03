@@ -21,15 +21,15 @@ export class App extends Component {
             country: 'in',
             progress: 10,
         };
-        console.log(this.state.progress)
+        // console.log(this.state.progress)
     }
 
 
     setCountry = () => {
         let countryName = document.getElementById("countryMenu").value;
         this.setState({ country: countryName })
-        console.log("Country Changed !!")
-        console.log(this.state.country)
+        // console.log("Country Changed !!")
+        // console.log(this.state.country)
     }
 
     // Now Setting the progress for the loading bar
@@ -37,9 +37,9 @@ export class App extends Component {
 
     // Also, to use the this.setProgress below, we have to make the function as Arrow Function
     setProgress = (newProgress) => {
-        console.log(newProgress);
+        // console.log(newProgress);
         this.setState({ progress: newProgress })
-        console.log(this.state.progress)
+        // console.log(this.state.progress)
 
     }
 
