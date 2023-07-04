@@ -38,11 +38,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## NOTE 
+## NOTE : For the Live Demo, You have to Download this project.
 - Step 0 : Download all the neccesary things like node,VS code and npm
 - Step 1 : Go to [News API](https://www.newsapi.org). Login there and you will get API Key.
-- Step 2 : Go to fullnews.js & line number 28, then change the API Key to your API Key.
-- Step 3 : Go to headlines.js & line number 7, then change the API Key to your API Key.
-- Step 4 : After that in the terminal of the project, run the command : `npm start`
+- Step 2 : Change API Key to your API Key
+- Step 3 : After that in the terminal of the project, run the command : `npm start`
 
 Also, This project will not work when deployed/uploaded on other websites. These API Keys will only work in localhost.
