@@ -2,14 +2,23 @@
 import React, { Component } from 'react'
 
 // Importing the link tag from the react-router-dom
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class NavBar extends Component {
 
     render() {
+
+        const fixednavbarStyle = {
+            "position": "fixed",
+            "top": "0px",
+            "width": "100%",
+            "zIndex": "1",
+            "boxShadow" : "0px 0px 9px 5px black",
+        }
+
         return (
             <div>
-                <nav className="navbar navbar-expand-lg bg-dark " data-bs-theme="dark">
+                <nav className="navbar navbar-expand-lg bg-dark" style={fixednavbarStyle} data-bs-theme="dark">
                     <div className="container-fluid">
                         <Link className="navbar-brand" to="/">Tazza Khabbar</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +54,7 @@ export class NavBar extends Component {
                                 </li>
                             </ul>
                             <form className="d-flex">
-                                <span className='text-white' style={{marginRight : "10px"}}>Country : </span>
+                                <span className='text-white' style={{ marginRight: "10px" }}>Country : </span>
                                 <select name="" id="countryMenu" onChange={this.props.updateCountry} defaultValue={"in"}>
                                     <option value="ar">Argentina</option>
                                     <option value="au">Australia</option>
@@ -105,7 +114,7 @@ export class NavBar extends Component {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div >
         )
     }
 }
