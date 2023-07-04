@@ -41,7 +41,7 @@ You may also see any lint errors in the console.
 ## NOTE : For the Live Demo, You have to Download this project.
 - Step 0 : Download all the neccesary things like node,VS code and npm
 - Step 1 : Go to [News API](https://www.newsapi.org). Login there and you will get API Key.
-- Step 2 : Change API Key to your API Key
-- Step 3 : After that in the terminal of the project, run the command : `npm start`
+- Step 2 : Go to file "**.env.local**" and change API Key to your API Key.
+- Step 3 : After that in the terminal of the project, run the command : `npm install` and then `npm start`
 
 Also, This project will not work when deployed/uploaded on other websites. These API Keys will only work in localhost.
