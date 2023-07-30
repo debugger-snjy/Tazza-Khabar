@@ -9,18 +9,18 @@ export class NavBar extends Component {
     render() {
 
         const fixednavbarStyle = {
-            "position": "fixed",
-            "top": "0px",
+            "position": "sticky",
+            "top": "0",
             "width": "100%",
             "zIndex": "1",
             "boxShadow" : "0px 0px 9px 5px black",
         }
 
         return (
-            <div>
-                <nav className="navbar navbar-expand-lg bg-dark" style={fixednavbarStyle} data-bs-theme="dark">
+            <div style={fixednavbarStyle}>
+                <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">Tazza Khabbar</Link>
+                        <Link className="navbar-brand" to="/">Tazza Khabar</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
