@@ -55,7 +55,7 @@ export class NavBar extends Component {
                             </ul>
                             <form className="d-flex">
                                 <span className='text-white' style={{ marginRight: "10px" }}>Country : </span>
-                                <select name="" id="countryMenu" onChange={this.props.updateCountry} defaultValue={"in"}>
+                                <select name="" id="countryMenu" onChange={this.props.updateCountry} defaultValue={"us"}>
                                     <option value="ar">Argentina</option>
                                     <option value="au">Australia</option>
                                     <option value="at">Austria</option>

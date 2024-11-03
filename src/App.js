@@ -18,7 +18,7 @@ export class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            country: 'in',
+            country: 'us',
             progress: 10,
         };
         // console.log(this.state.progress)
